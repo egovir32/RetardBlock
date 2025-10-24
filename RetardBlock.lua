@@ -222,8 +222,8 @@ local function CreateMainFrame()
     filterText:SetText("Mode Switch")
     filterBtn.Text = filterText
     filterBtn:SetScript("OnClick", function()
-        RETDB.filterMode = (RETDB.filterMode + 1) % 3
-        frame:UpdateTitle()
+    RETDB.filterMode = (RETDB.filterMode + 1) % 3
+    frame:UpdateTitle()
     end)
     frame.UpdateWordList = function(self)
         if not self.currentTab or not self.tabPanels[self.currentTab] or not self.tabPanels[self.currentTab].content then return end
@@ -608,6 +608,7 @@ CreateHistoryFrame(frame)
 frame:Hide()
 
 frame:SetScript("OnShow", function(self)
+    self:UpdateTitle()
     if not self.currentTab then
         self.tabButtons.General:Click()
     else
@@ -686,5 +687,6 @@ SlashCmdList["RETFLTR"] = function(msg)
         frame:Show()
     end
 end
+
 
 SLASH_RETFLTR1 = "/retard"
