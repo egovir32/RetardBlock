@@ -1,0 +1,7 @@
+## Interface: 30300
+## Title: RetardBlock 3.3.5
+## Version: 1.0
+## Notes: Filters out the retards, latams, guild spammers and others. Use /retard command to enable UI.
+## Author: egovir
+## SavedVariables: RETDB
+RetardBlock.lua
