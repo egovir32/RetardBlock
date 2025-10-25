@@ -688,5 +688,4 @@ SlashCmdList["RETFLTR"] = function(msg)
     end
 end
 
-
 SLASH_RETFLTR1 = "/retard"
